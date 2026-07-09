@@ -1,23 +1,46 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 :root {
     --header-height: 3rem;
     --body-font: "Poppins", sans-serif;
     --normal-font-size: .938rem;
-    --second-color: hsl(var(--hue-color), 56%, 12%);
-
+    --first-color: hsl(224, 89%, 60%);
+    --second-color: hsl(224, 56%, 12%);
+    --text-color: hsl(224, 12%, 30%);
+    --z-fixed: 100;
 }
 
-/* html {
+html {
     scroll-behavior: smooth;
-} */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 body {
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
     color: var(--second-color);
+}
+
+a {
+    color: var(--first-color);
+    text-decoration: none;
+}
+
+.bd-grid {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .l-header {
@@ -30,9 +53,108 @@ body {
     box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
-/* .bd-grid {
-    max-width: 1024px;
-    display: grid;
-    margin-left: var(--mb-2);
-    margin-right: var(--mb-2);
-  } */
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav__logo {
+    font-weight: 700;
+    color: var(--second-color);
+}
+
+.nav__list {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    color: var(--second-color);
+}
+
+.nav__link:hover,
+.nav__link.active-link {
+    color: var(--first-color);
+}
+
+.home {
+    padding: 4rem 1.5rem 2rem;
+}
+
+.home__title {
+    font-size: 2.25rem;
+    margin: 0 0 .25rem;
+}
+
+.home__subtitle {
+    font-weight: 600;
+    color: var(--first-color);
+    margin: 0 0 1rem;
+}
+
+.home__intro {
+    margin: 0;
+}
+
+.section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.section__title {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+    border-bottom: 2px solid var(--first-color);
+    padding-bottom: .375rem;
+}
+
+.job {
+    margin-bottom: 1.5rem;
+}
+
+.job__role {
+    margin: 0;
+}
+
+.job__time {
+    margin: .125rem 0 .5rem;
+    font-size: .85rem;
+    color: hsl(224, 12%, 50%);
+}
+
+.job__points {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.skills__list,
+.contact__list {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: .85rem;
+    color: hsl(224, 12%, 55%);
+}
+
+@media (max-width: 480px) {
+    .nav {
+        height: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        gap: .25rem;
+    }
+
+    .home__title {
+        font-size: 1.75rem;
+    }
+}

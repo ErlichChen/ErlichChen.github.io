@@ -1,55 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initail-scal=1.0" />
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Fast portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Erlich Chen 的个人简历" />
+    <meta name="author" content="Erlich Chen" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Erlich Chen · 简历</title>
 </head>
 <body>
     <header class="l-header">
         <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">Marlon</a>
-            </div>
-
-            <div>
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <i class='bx bx-menu'></i>
-            </div>
+            <a href="#home" class="nav__logo">Erlich Chen</a>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#about" class="nav__link">关于</a></li>
+                <li class="nav__item"><a href="#experience" class="nav__link">经历</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">技能</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">联系</a></li>
+            </ul>
         </nav>
     </header>
-    
+
     <main>
-        <section>
-            <p>section 1</p>
+        <section class="home bd-grid" id="home">
+            <h1 class="home__title">Erlich Chen</h1>
+            <p class="home__subtitle">软件工程师 · Software Engineer</p>
+            <p class="home__intro">【一句话介绍自己：方向、年限、最擅长的领域】</p>
         </section>
 
-        <section>
-            <p>section 2</p>
+        <section class="section bd-grid" id="about">
+            <h2 class="section__title">关于我</h2>
+            <p>【两三句自我介绍：背景、关注的技术方向、正在做的事情】</p>
         </section>
 
-        <section>
-            <p>section 3</p>
+        <section class="section bd-grid" id="experience">
+            <h2 class="section__title">工作经历</h2>
+            <article class="job">
+                <h3 class="job__role">【职位】 · 【公司名称】</h3>
+                <p class="job__time">【起止时间，例如 2022.03 — 至今】</p>
+                <ul class="job__points">
+                    <li>【负责的核心工作与成果，尽量带可量化的结果】</li>
+                    <li>【第二条工作亮点】</li>
+                </ul>
+            </article>
+            <article class="job">
+                <h3 class="job__role">【职位】 · 【上一家公司】</h3>
+                <p class="job__time">【起止时间】</p>
+                <ul class="job__points">
+                    <li>【工作亮点】</li>
+                </ul>
+            </article>
         </section>
 
-        <section>
-            <p>section 4</p>
+        <section class="section bd-grid" id="skills">
+            <h2 class="section__title">技能</h2>
+            <ul class="skills__list">
+                <li>【语言/框架，例如 JavaScript / TypeScript / React】</li>
+                <li>【后端/工程能力】</li>
+                <li>【其他：工具链、云服务、语言能力等】</li>
+            </ul>
         </section>
 
+        <section class="section bd-grid" id="contact">
+            <h2 class="section__title">联系方式</h2>
+            <ul class="contact__list">
+                <li>GitHub：<a href="https://github.com/ErlichChen">github.com/ErlichChen</a></li>
+                <li>Email：【填写你希望公开的邮箱】</li>
+            </ul>
+        </section>
     </main>
 
-    <footer>
-        <p>footer</p>
+    <footer class="footer">
+        <p>© 2026 Erlich Chen</p>
     </footer>
     <script src="assets/js/main.js"></script>
 </body>
